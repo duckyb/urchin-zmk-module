@@ -1,4 +1,3 @@
-title="zephyr/module.yml"
 name: zmk-keyboards-urchin
 build:
   settings:
