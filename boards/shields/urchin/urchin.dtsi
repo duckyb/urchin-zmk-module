@@ -6,11 +6,16 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
+#include "urchin-layouts.dtsi"
+
+&default_layout {
+    transform = <&default_transform>;
+};
 
 / {
     chosen {
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+        zmk,physical-layout = &default_layout;
     };
 
     default_transform: keymap_transform_0 {
@@ -26,7 +31,7 @@
         >;
     };
 
-    kscan0: kscan {        
+    kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
     };
